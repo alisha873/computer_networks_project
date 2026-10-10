@@ -55,3 +55,62 @@ def test_http_status_does_not_override_nonzero_exit_code():
     assert result["experiment_outcome"] == "connection_error"
     assert result["tcp_result"] is None
     assert result["tls_result"] is None
+
+
+def test_explicit_ech_rejection_and_retry_are_classified():
+    result = classify_curl_record(
+        make_record(
+            return_code=101,
+            http_status=0,
+            ech_status="unknown",
+            outcome="connection_error",
+            trace_sni=None,
+            ech_rejection_observed=True,
+            ech_retry_config_received=True,
+        )
+    )
+
+    assert result["classification"] == "server_rejected_ech_retry"
+    assert "ech_rejection_observed" in result["classification_evidence"]
+    assert "ech_retry_config_received" in result["classification_evidence"]
+    # The protocol classification and request outcome answer different questions.
+    assert result["experiment_outcome"] == "connection_error"
+
+
+def test_ech_rejection_without_retry_remains_inconclusive():
+    result = classify_curl_record(
+        make_record(
+            return_code=101,
+            http_status=0,
+            ech_status="unknown",
+            outcome="connection_error",
+            trace_sni=None,
+            ech_rejection_observed=True,
+            ech_retry_config_received=False,
+        )
+    )
+
+    assert result["classification"] == "inconclusive"
+    assert "ech_rejection_observed" in result["classification_evidence"]
+    assert "ech_retry_config_received" not in result["classification_evidence"]
+
+
+def test_enriched_record_preserves_ech_rejection_flags():
+    record = make_record(
+        return_code=101,
+        http_status=0,
+        ech_status="unknown",
+        outcome="connection_error",
+        trace_sni=None,
+        ech_rejection_observed=True,
+        ech_retry_config_received=True,
+    )
+
+    result = classify_curl_record(record)
+
+    assert result["ech_rejection_observed"] is True
+    assert result["ech_retry_config_received"] is True
+    assert "ech_rejection_observed" in result["classification_evidence"]
+    assert "ech_retry_config_received" in result["classification_evidence"]
+    assert result["classification"] == "server_rejected_ech_retry"
+    assert result["experiment_outcome"] == "connection_error"

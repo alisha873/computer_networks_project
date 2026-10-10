@@ -43,6 +43,15 @@ def classify_curl_record(record: dict) -> dict:
     ]
     if trace_sni:
         evidence.append(f"trace_sni={trace_sni}")
+
+    rejection_observed = record.get("ech_rejection_observed") is True
+    retry_config_received = record.get("ech_retry_config_received") is True
+
+    if rejection_observed:
+        evidence.append("ech_rejection_observed")
+    if retry_config_received:
+        evidence.append("ech_retry_config_received")
+
     if ech_accepted is True:
         evidence.append("ech_success_explicitly_reported_by_curl")
     if return_code != 0 or http_status is None:

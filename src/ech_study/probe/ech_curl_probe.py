@@ -74,6 +74,10 @@ def run_trial(mode, endpoint=ENDPOINT, doh_url=DOH_URL):
         "return_code": result.returncode,
         "http_status": http_status,
         "ech_status": ech_status,
+        "ech_rejection_observed": bool(
+            re.search(r"ECH: rejected", log, re.IGNORECASE)
+        ),
+        "ech_retry_config_received": "retry_configs" in log,
         "outcome": outcome,
         "trace_sni": trace.get("sni"),
         "trace_location": trace.get("loc"),
