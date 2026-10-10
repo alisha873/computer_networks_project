@@ -1,0 +1,10 @@
+.venv/
+__pycache__/
+.pytest_cache/
+*.py[cod]
+.env
+.DS_Store
+
+# Keep large/raw datasets out of Git unless explicitly approved
+data/raw/*
+!data/raw/.gitkeep
