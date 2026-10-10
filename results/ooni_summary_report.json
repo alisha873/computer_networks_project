@@ -1,0 +1,25 @@
+{
+  "source": "OONI web_connectivity",
+  "total_measurements": 5,
+  "unique_measurement_uids": 5,
+  "accessible": {
+    "false": 1,
+    "true": 4
+  },
+  "anomaly": {
+    "true": 1,
+    "false": 4
+  },
+  "confirmed": {
+    "false": 5
+  },
+  "failure": {
+    "false": 5
+  },
+  "blocking_reasons": {
+    "dns": 1,
+    "unknown": 4
+  },
+  "ech_measurements": 0,
+  "interpretation": "OONI web-connectivity observations provide contextual connectivity evidence, not direct evidence of ECH censorship. An anomaly or accessibility failure alone does not establish censorship. ECH-specific attribution requires separate controlled measurements."
+}

@@ -1,0 +1,48 @@
+{
+  "total_records": 6,
+  "mode_counts": {
+    "false": 3,
+    "true": 3
+  },
+  "outcome_counts": {
+    "control_success": 3,
+    "ech_success": 3
+  },
+  "unique_pairs": 3,
+  "complete_pairs": 3,
+  "incomplete_or_malformed_pairs": 0,
+  "pairs_with_duplicate_modes": 0,
+  "paired_outcomes": {
+    "both_success": 3,
+    "ech_only_success": 0,
+    "control_only_success": 0,
+    "neither_success": 0
+  },
+  "pair_details": [
+    {
+      "pair_id": "pair-0001",
+      "complete": true,
+      "ech_outcome": "ech_success",
+      "control_outcome": "control_success",
+      "ech_http_status": 200,
+      "control_http_status": 200
+    },
+    {
+      "pair_id": "pair-0002",
+      "complete": true,
+      "ech_outcome": "ech_success",
+      "control_outcome": "control_success",
+      "ech_http_status": 200,
+      "control_http_status": 200
+    },
+    {
+      "pair_id": "pair-0003",
+      "complete": true,
+      "ech_outcome": "ech_success",
+      "control_outcome": "control_success",
+      "ech_http_status": 200,
+      "control_http_status": 200
+    }
+  ],
+  "interpretation": "Descriptive results only. A failed request is not by itself evidence of censorship. ECH-specific attribution requires validated evidence about the failure stage and plausible alternative explanations."
+}

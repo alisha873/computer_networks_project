@@ -8,3 +8,9 @@ __pycache__/
 # Keep large/raw datasets out of Git unless explicitly approved
 data/raw/*
 !data/raw/.gitkeep
+
+# Generated Python packaging metadata
+src/*.egg-info/
+
+# Temporary editor or manual backup files
+*.bak
