@@ -1,0 +1,9 @@
+* Host defo.ie:443 was resolved.
+* IPv6: (none)
+* IPv4: 213.108.108.101
+*   Trying 213.108.108.101:443...
+* ECH: SSL_ECH_set1_ech_config_list failed
+* closing connection #0
+curl: (35) SSL connect error
+
+HTTP_STATUS:000

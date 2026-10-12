@@ -15,13 +15,23 @@ def classify_trial(trial: Trial) -> Trial:
     """
     evidence = list(trial.evidence or [])
     facts = {item.strip().lower() for item in evidence}
+    positive_values = {"true", "yes", "observed", "confirmed", "received"}
 
     def has_fact(*terms: str) -> bool:
-        return any(
-            term in fact
-            for fact in facts
-            for term in terms
-        )
+        for fact in facts:
+            key, separator, value = fact.partition("=")
+            for term in terms:
+                normalized_term = term.strip().lower()
+                if fact == normalized_term:
+                    return True
+                if (
+                    "=" not in normalized_term
+                    and separator
+                    and key.strip() == normalized_term
+                    and value.strip() in positive_values
+                ):
+                    return True
+        return False
 
     def add_fact(message: str) -> None:
         if message not in evidence:
@@ -31,8 +41,34 @@ def classify_trial(trial: Trial) -> Trial:
     tcp = (trial.tcp_result or "").strip().lower()
     tls = (trial.tls_result or "").strip().lower()
 
-    # An explicit server retry signal takes precedence over generic failures.
-    if has_fact("server_rejected_ech_retry", "ech_retry_config_received"):
+    # Contradictory ECH acceptance observations cannot support attribution.
+    if trial.ech_accepted is True and (
+        mode in {"none", "grease"}
+        or tcp in {
+            "failed", "failure", "timeout", "timed_out",
+            "refused", "reset", "unreachable", "error",
+        }
+        or tls in {"failed", "failure", "error", "handshake_failed"}
+    ):
+        trial.classification = "inconclusive"
+        add_fact("classification_basis=contradictory_ech_acceptance_observation")
+        trial.evidence = evidence
+        return trial
+
+    # A claimed ECH-specific failure cannot be attributed without real ECH.
+    if mode in {"none", "grease"} and has_fact(
+        "ech_specific_tls_failure", "ech_failure_confirmed"
+    ):
+        trial.classification = "inconclusive"
+        add_fact("classification_basis=ech_failure_conflicts_with_requested_mode")
+        trial.evidence = evidence
+        return trial
+
+    # Require rejection plus retry evidence unless a consolidated marker exists.
+    if has_fact("server_rejected_ech_retry") or (
+        has_fact("ech_rejection_observed")
+        and has_fact("ech_retry_config_received")
+    ):
         trial.classification = "server_rejected_ech_retry"
         add_fact("classification_basis=explicit_ech_retry_evidence")
         trial.evidence = evidence

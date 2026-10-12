@@ -1,0 +1,709 @@
+{
+  "total_records": 60,
+  "attempted_records": 60,
+  "mode_counts": {
+    "false": 30,
+    "true": 30
+  },
+  "outcome_counts": {
+    "connection_error": 10,
+    "control_success": 30,
+    "ech_success": 20
+  },
+  "ech_outcome_counts": {
+    "connection_error": 10,
+    "ech_success": 20
+  },
+  "control_outcome_counts": {
+    "control_success": 30
+  },
+  "records_without_pair_id": 0,
+  "unique_pairs": 30,
+  "complete_pairs": 30,
+  "incomplete_or_malformed_pairs": 0,
+  "pairs_missing_or_unexpected_trials": 0,
+  "pairs_with_duplicate_modes": 0,
+  "pairs_missing_destination_or_endpoint": 0,
+  "pairs_with_mismatched_destinations_or_endpoints": 0,
+  "paired_outcomes": {
+    "both_success": 20,
+    "ech_only_success": 0,
+    "control_only_success": 0,
+    "neither_success_both_outcomes_known": 0,
+    "at_least_one_outcome_unresolved": 10
+  },
+  "pair_details": [
+    {
+      "complete": true,
+      "records": 2,
+      "ech_trials": 1,
+      "control_trials": 1,
+      "destination_ids": [
+        "dest-01"
+      ],
+      "endpoints": [
+        "https://crypto.cloudflare.com/cdn-cgi/trace"
+      ],
+      "validation_errors": [],
+      "ech_outcome": "ech_success",
+      "control_outcome": "control_success",
+      "ech_http_status": 200,
+      "control_http_status": 200,
+      "pair_id": "dest-01-pair-0001",
+      "campaign_id": "2026-10-10T22:17:19.490112+00:00"
+    },
+    {
+      "complete": true,
+      "records": 2,
+      "ech_trials": 1,
+      "control_trials": 1,
+      "destination_ids": [
+        "dest-01"
+      ],
+      "endpoints": [
+        "https://crypto.cloudflare.com/cdn-cgi/trace"
+      ],
+      "validation_errors": [],
+      "ech_outcome": "ech_success",
+      "control_outcome": "control_success",
+      "ech_http_status": 200,
+      "control_http_status": 200,
+      "pair_id": "dest-01-pair-0002",
+      "campaign_id": "2026-10-10T22:17:19.490112+00:00"
+    },
+    {
+      "complete": true,
+      "records": 2,
+      "ech_trials": 1,
+      "control_trials": 1,
+      "destination_ids": [
+        "dest-01"
+      ],
+      "endpoints": [
+        "https://crypto.cloudflare.com/cdn-cgi/trace"
+      ],
+      "validation_errors": [],
+      "ech_outcome": "ech_success",
+      "control_outcome": "control_success",
+      "ech_http_status": 200,
+      "control_http_status": 200,
+      "pair_id": "dest-01-pair-0003",
+      "campaign_id": "2026-10-10T22:17:19.490112+00:00"
+    },
+    {
+      "complete": true,
+      "records": 2,
+      "ech_trials": 1,
+      "control_trials": 1,
+      "destination_ids": [
+        "dest-01"
+      ],
+      "endpoints": [
+        "https://crypto.cloudflare.com/cdn-cgi/trace"
+      ],
+      "validation_errors": [],
+      "ech_outcome": "ech_success",
+      "control_outcome": "control_success",
+      "ech_http_status": 200,
+      "control_http_status": 200,
+      "pair_id": "dest-01-pair-0004",
+      "campaign_id": "2026-10-10T22:17:19.490112+00:00"
+    },
+    {
+      "complete": true,
+      "records": 2,
+      "ech_trials": 1,
+      "control_trials": 1,
+      "destination_ids": [
+        "dest-01"
+      ],
+      "endpoints": [
+        "https://crypto.cloudflare.com/cdn-cgi/trace"
+      ],
+      "validation_errors": [],
+      "ech_outcome": "ech_success",
+      "control_outcome": "control_success",
+      "ech_http_status": 200,
+      "control_http_status": 200,
+      "pair_id": "dest-01-pair-0005",
+      "campaign_id": "2026-10-10T22:17:19.490112+00:00"
+    },
+    {
+      "complete": true,
+      "records": 2,
+      "ech_trials": 1,
+      "control_trials": 1,
+      "destination_ids": [
+        "dest-01"
+      ],
+      "endpoints": [
+        "https://crypto.cloudflare.com/cdn-cgi/trace"
+      ],
+      "validation_errors": [],
+      "ech_outcome": "ech_success",
+      "control_outcome": "control_success",
+      "ech_http_status": 200,
+      "control_http_status": 200,
+      "pair_id": "dest-01-pair-0006",
+      "campaign_id": "2026-10-10T22:17:19.490112+00:00"
+    },
+    {
+      "complete": true,
+      "records": 2,
+      "ech_trials": 1,
+      "control_trials": 1,
+      "destination_ids": [
+        "dest-01"
+      ],
+      "endpoints": [
+        "https://crypto.cloudflare.com/cdn-cgi/trace"
+      ],
+      "validation_errors": [],
+      "ech_outcome": "ech_success",
+      "control_outcome": "control_success",
+      "ech_http_status": 200,
+      "control_http_status": 200,
+      "pair_id": "dest-01-pair-0007",
+      "campaign_id": "2026-10-10T22:17:19.490112+00:00"
+    },
+    {
+      "complete": true,
+      "records": 2,
+      "ech_trials": 1,
+      "control_trials": 1,
+      "destination_ids": [
+        "dest-01"
+      ],
+      "endpoints": [
+        "https://crypto.cloudflare.com/cdn-cgi/trace"
+      ],
+      "validation_errors": [],
+      "ech_outcome": "ech_success",
+      "control_outcome": "control_success",
+      "ech_http_status": 200,
+      "control_http_status": 200,
+      "pair_id": "dest-01-pair-0008",
+      "campaign_id": "2026-10-10T22:17:19.490112+00:00"
+    },
+    {
+      "complete": true,
+      "records": 2,
+      "ech_trials": 1,
+      "control_trials": 1,
+      "destination_ids": [
+        "dest-01"
+      ],
+      "endpoints": [
+        "https://crypto.cloudflare.com/cdn-cgi/trace"
+      ],
+      "validation_errors": [],
+      "ech_outcome": "ech_success",
+      "control_outcome": "control_success",
+      "ech_http_status": 200,
+      "control_http_status": 200,
+      "pair_id": "dest-01-pair-0009",
+      "campaign_id": "2026-10-10T22:17:19.490112+00:00"
+    },
+    {
+      "complete": true,
+      "records": 2,
+      "ech_trials": 1,
+      "control_trials": 1,
+      "destination_ids": [
+        "dest-01"
+      ],
+      "endpoints": [
+        "https://crypto.cloudflare.com/cdn-cgi/trace"
+      ],
+      "validation_errors": [],
+      "ech_outcome": "ech_success",
+      "control_outcome": "control_success",
+      "ech_http_status": 200,
+      "control_http_status": 200,
+      "pair_id": "dest-01-pair-0010",
+      "campaign_id": "2026-10-10T22:17:19.490112+00:00"
+    },
+    {
+      "complete": true,
+      "records": 2,
+      "ech_trials": 1,
+      "control_trials": 1,
+      "destination_ids": [
+        "dest-02"
+      ],
+      "endpoints": [
+        "https://defo.ie/ech-check.php"
+      ],
+      "validation_errors": [],
+      "ech_outcome": "connection_error",
+      "control_outcome": "control_success",
+      "ech_http_status": 0,
+      "control_http_status": 200,
+      "pair_id": "dest-02-pair-0001",
+      "campaign_id": "2026-10-10T22:17:19.490112+00:00"
+    },
+    {
+      "complete": true,
+      "records": 2,
+      "ech_trials": 1,
+      "control_trials": 1,
+      "destination_ids": [
+        "dest-02"
+      ],
+      "endpoints": [
+        "https://defo.ie/ech-check.php"
+      ],
+      "validation_errors": [],
+      "ech_outcome": "connection_error",
+      "control_outcome": "control_success",
+      "ech_http_status": 0,
+      "control_http_status": 200,
+      "pair_id": "dest-02-pair-0002",
+      "campaign_id": "2026-10-10T22:17:19.490112+00:00"
+    },
+    {
+      "complete": true,
+      "records": 2,
+      "ech_trials": 1,
+      "control_trials": 1,
+      "destination_ids": [
+        "dest-02"
+      ],
+      "endpoints": [
+        "https://defo.ie/ech-check.php"
+      ],
+      "validation_errors": [],
+      "ech_outcome": "connection_error",
+      "control_outcome": "control_success",
+      "ech_http_status": 0,
+      "control_http_status": 200,
+      "pair_id": "dest-02-pair-0003",
+      "campaign_id": "2026-10-10T22:17:19.490112+00:00"
+    },
+    {
+      "complete": true,
+      "records": 2,
+      "ech_trials": 1,
+      "control_trials": 1,
+      "destination_ids": [
+        "dest-02"
+      ],
+      "endpoints": [
+        "https://defo.ie/ech-check.php"
+      ],
+      "validation_errors": [],
+      "ech_outcome": "connection_error",
+      "control_outcome": "control_success",
+      "ech_http_status": 0,
+      "control_http_status": 200,
+      "pair_id": "dest-02-pair-0004",
+      "campaign_id": "2026-10-10T22:17:19.490112+00:00"
+    },
+    {
+      "complete": true,
+      "records": 2,
+      "ech_trials": 1,
+      "control_trials": 1,
+      "destination_ids": [
+        "dest-02"
+      ],
+      "endpoints": [
+        "https://defo.ie/ech-check.php"
+      ],
+      "validation_errors": [],
+      "ech_outcome": "connection_error",
+      "control_outcome": "control_success",
+      "ech_http_status": 0,
+      "control_http_status": 200,
+      "pair_id": "dest-02-pair-0005",
+      "campaign_id": "2026-10-10T22:17:19.490112+00:00"
+    },
+    {
+      "complete": true,
+      "records": 2,
+      "ech_trials": 1,
+      "control_trials": 1,
+      "destination_ids": [
+        "dest-02"
+      ],
+      "endpoints": [
+        "https://defo.ie/ech-check.php"
+      ],
+      "validation_errors": [],
+      "ech_outcome": "connection_error",
+      "control_outcome": "control_success",
+      "ech_http_status": 0,
+      "control_http_status": 200,
+      "pair_id": "dest-02-pair-0006",
+      "campaign_id": "2026-10-10T22:17:19.490112+00:00"
+    },
+    {
+      "complete": true,
+      "records": 2,
+      "ech_trials": 1,
+      "control_trials": 1,
+      "destination_ids": [
+        "dest-02"
+      ],
+      "endpoints": [
+        "https://defo.ie/ech-check.php"
+      ],
+      "validation_errors": [],
+      "ech_outcome": "connection_error",
+      "control_outcome": "control_success",
+      "ech_http_status": 0,
+      "control_http_status": 200,
+      "pair_id": "dest-02-pair-0007",
+      "campaign_id": "2026-10-10T22:17:19.490112+00:00"
+    },
+    {
+      "complete": true,
+      "records": 2,
+      "ech_trials": 1,
+      "control_trials": 1,
+      "destination_ids": [
+        "dest-02"
+      ],
+      "endpoints": [
+        "https://defo.ie/ech-check.php"
+      ],
+      "validation_errors": [],
+      "ech_outcome": "connection_error",
+      "control_outcome": "control_success",
+      "ech_http_status": 0,
+      "control_http_status": 200,
+      "pair_id": "dest-02-pair-0008",
+      "campaign_id": "2026-10-10T22:17:19.490112+00:00"
+    },
+    {
+      "complete": true,
+      "records": 2,
+      "ech_trials": 1,
+      "control_trials": 1,
+      "destination_ids": [
+        "dest-02"
+      ],
+      "endpoints": [
+        "https://defo.ie/ech-check.php"
+      ],
+      "validation_errors": [],
+      "ech_outcome": "connection_error",
+      "control_outcome": "control_success",
+      "ech_http_status": 0,
+      "control_http_status": 200,
+      "pair_id": "dest-02-pair-0009",
+      "campaign_id": "2026-10-10T22:17:19.490112+00:00"
+    },
+    {
+      "complete": true,
+      "records": 2,
+      "ech_trials": 1,
+      "control_trials": 1,
+      "destination_ids": [
+        "dest-02"
+      ],
+      "endpoints": [
+        "https://defo.ie/ech-check.php"
+      ],
+      "validation_errors": [],
+      "ech_outcome": "connection_error",
+      "control_outcome": "control_success",
+      "ech_http_status": 0,
+      "control_http_status": 200,
+      "pair_id": "dest-02-pair-0010",
+      "campaign_id": "2026-10-10T22:17:19.490112+00:00"
+    },
+    {
+      "complete": true,
+      "records": 2,
+      "ech_trials": 1,
+      "control_trials": 1,
+      "destination_ids": [
+        "dest-03"
+      ],
+      "endpoints": [
+        "https://tls-ech.dev/"
+      ],
+      "validation_errors": [],
+      "ech_outcome": "ech_success",
+      "control_outcome": "control_success",
+      "ech_http_status": 200,
+      "control_http_status": 200,
+      "pair_id": "dest-03-pair-0001",
+      "campaign_id": "2026-10-10T22:17:19.490112+00:00"
+    },
+    {
+      "complete": true,
+      "records": 2,
+      "ech_trials": 1,
+      "control_trials": 1,
+      "destination_ids": [
+        "dest-03"
+      ],
+      "endpoints": [
+        "https://tls-ech.dev/"
+      ],
+      "validation_errors": [],
+      "ech_outcome": "ech_success",
+      "control_outcome": "control_success",
+      "ech_http_status": 200,
+      "control_http_status": 200,
+      "pair_id": "dest-03-pair-0002",
+      "campaign_id": "2026-10-10T22:17:19.490112+00:00"
+    },
+    {
+      "complete": true,
+      "records": 2,
+      "ech_trials": 1,
+      "control_trials": 1,
+      "destination_ids": [
+        "dest-03"
+      ],
+      "endpoints": [
+        "https://tls-ech.dev/"
+      ],
+      "validation_errors": [],
+      "ech_outcome": "ech_success",
+      "control_outcome": "control_success",
+      "ech_http_status": 200,
+      "control_http_status": 200,
+      "pair_id": "dest-03-pair-0003",
+      "campaign_id": "2026-10-10T22:17:19.490112+00:00"
+    },
+    {
+      "complete": true,
+      "records": 2,
+      "ech_trials": 1,
+      "control_trials": 1,
+      "destination_ids": [
+        "dest-03"
+      ],
+      "endpoints": [
+        "https://tls-ech.dev/"
+      ],
+      "validation_errors": [],
+      "ech_outcome": "ech_success",
+      "control_outcome": "control_success",
+      "ech_http_status": 200,
+      "control_http_status": 200,
+      "pair_id": "dest-03-pair-0004",
+      "campaign_id": "2026-10-10T22:17:19.490112+00:00"
+    },
+    {
+      "complete": true,
+      "records": 2,
+      "ech_trials": 1,
+      "control_trials": 1,
+      "destination_ids": [
+        "dest-03"
+      ],
+      "endpoints": [
+        "https://tls-ech.dev/"
+      ],
+      "validation_errors": [],
+      "ech_outcome": "ech_success",
+      "control_outcome": "control_success",
+      "ech_http_status": 200,
+      "control_http_status": 200,
+      "pair_id": "dest-03-pair-0005",
+      "campaign_id": "2026-10-10T22:17:19.490112+00:00"
+    },
+    {
+      "complete": true,
+      "records": 2,
+      "ech_trials": 1,
+      "control_trials": 1,
+      "destination_ids": [
+        "dest-03"
+      ],
+      "endpoints": [
+        "https://tls-ech.dev/"
+      ],
+      "validation_errors": [],
+      "ech_outcome": "ech_success",
+      "control_outcome": "control_success",
+      "ech_http_status": 200,
+      "control_http_status": 200,
+      "pair_id": "dest-03-pair-0006",
+      "campaign_id": "2026-10-10T22:17:19.490112+00:00"
+    },
+    {
+      "complete": true,
+      "records": 2,
+      "ech_trials": 1,
+      "control_trials": 1,
+      "destination_ids": [
+        "dest-03"
+      ],
+      "endpoints": [
+        "https://tls-ech.dev/"
+      ],
+      "validation_errors": [],
+      "ech_outcome": "ech_success",
+      "control_outcome": "control_success",
+      "ech_http_status": 200,
+      "control_http_status": 200,
+      "pair_id": "dest-03-pair-0007",
+      "campaign_id": "2026-10-10T22:17:19.490112+00:00"
+    },
+    {
+      "complete": true,
+      "records": 2,
+      "ech_trials": 1,
+      "control_trials": 1,
+      "destination_ids": [
+        "dest-03"
+      ],
+      "endpoints": [
+        "https://tls-ech.dev/"
+      ],
+      "validation_errors": [],
+      "ech_outcome": "ech_success",
+      "control_outcome": "control_success",
+      "ech_http_status": 200,
+      "control_http_status": 200,
+      "pair_id": "dest-03-pair-0008",
+      "campaign_id": "2026-10-10T22:17:19.490112+00:00"
+    },
+    {
+      "complete": true,
+      "records": 2,
+      "ech_trials": 1,
+      "control_trials": 1,
+      "destination_ids": [
+        "dest-03"
+      ],
+      "endpoints": [
+        "https://tls-ech.dev/"
+      ],
+      "validation_errors": [],
+      "ech_outcome": "ech_success",
+      "control_outcome": "control_success",
+      "ech_http_status": 200,
+      "control_http_status": 200,
+      "pair_id": "dest-03-pair-0009",
+      "campaign_id": "2026-10-10T22:17:19.490112+00:00"
+    },
+    {
+      "complete": true,
+      "records": 2,
+      "ech_trials": 1,
+      "control_trials": 1,
+      "destination_ids": [
+        "dest-03"
+      ],
+      "endpoints": [
+        "https://tls-ech.dev/"
+      ],
+      "validation_errors": [],
+      "ech_outcome": "ech_success",
+      "control_outcome": "control_success",
+      "ech_http_status": 200,
+      "control_http_status": 200,
+      "pair_id": "dest-03-pair-0010",
+      "campaign_id": "2026-10-10T22:17:19.490112+00:00"
+    }
+  ],
+  "per_destination": [
+    {
+      "destination_id": "dest-01",
+      "endpoint": "https://crypto.cloudflare.com/cdn-cgi/trace",
+      "attempted_records": 20,
+      "mode_counts": {
+        "false": 10,
+        "true": 10
+      },
+      "outcome_counts": {
+        "control_success": 10,
+        "ech_success": 10
+      },
+      "ech_outcome_counts": {
+        "ech_success": 10
+      },
+      "control_outcome_counts": {
+        "control_success": 10
+      },
+      "unique_pairs": 10,
+      "complete_pairs": 10,
+      "incomplete_or_malformed_pairs": 0,
+      "pairs_missing_or_unexpected_trials": 0,
+      "pairs_with_duplicate_modes": 0,
+      "pairs_missing_destination_or_endpoint": 0,
+      "pairs_with_mismatched_destinations_or_endpoints": 0,
+      "paired_outcomes": {
+        "both_success": 10,
+        "ech_only_success": 0,
+        "control_only_success": 0,
+        "neither_success_both_outcomes_known": 0,
+        "at_least_one_outcome_unresolved": 0
+      }
+    },
+    {
+      "destination_id": "dest-02",
+      "endpoint": "https://defo.ie/ech-check.php",
+      "attempted_records": 20,
+      "mode_counts": {
+        "false": 10,
+        "true": 10
+      },
+      "outcome_counts": {
+        "connection_error": 10,
+        "control_success": 10
+      },
+      "ech_outcome_counts": {
+        "connection_error": 10
+      },
+      "control_outcome_counts": {
+        "control_success": 10
+      },
+      "unique_pairs": 10,
+      "complete_pairs": 10,
+      "incomplete_or_malformed_pairs": 0,
+      "pairs_missing_or_unexpected_trials": 0,
+      "pairs_with_duplicate_modes": 0,
+      "pairs_missing_destination_or_endpoint": 0,
+      "pairs_with_mismatched_destinations_or_endpoints": 0,
+      "paired_outcomes": {
+        "both_success": 0,
+        "ech_only_success": 0,
+        "control_only_success": 0,
+        "neither_success_both_outcomes_known": 0,
+        "at_least_one_outcome_unresolved": 10
+      }
+    },
+    {
+      "destination_id": "dest-03",
+      "endpoint": "https://tls-ech.dev/",
+      "attempted_records": 20,
+      "mode_counts": {
+        "false": 10,
+        "true": 10
+      },
+      "outcome_counts": {
+        "control_success": 10,
+        "ech_success": 10
+      },
+      "ech_outcome_counts": {
+        "ech_success": 10
+      },
+      "control_outcome_counts": {
+        "control_success": 10
+      },
+      "unique_pairs": 10,
+      "complete_pairs": 10,
+      "incomplete_or_malformed_pairs": 0,
+      "pairs_missing_or_unexpected_trials": 0,
+      "pairs_with_duplicate_modes": 0,
+      "pairs_missing_destination_or_endpoint": 0,
+      "pairs_with_mismatched_destinations_or_endpoints": 0,
+      "paired_outcomes": {
+        "both_success": 10,
+        "ech_only_success": 0,
+        "control_only_success": 0,
+        "neither_success_both_outcomes_known": 0,
+        "at_least_one_outcome_unresolved": 0
+      }
+    }
+  ],
+  "interpretation": "Descriptive results only. A failed request is not by itself evidence of censorship. ECH-specific attribution requires validated evidence about the failure stage and plausible alternative explanations."
+}

@@ -1,0 +1,48 @@
+{
+  "benchmark_id": "local-ech-failure-attribution-v1",
+  "purpose": "Compare project classifier output with verified local control conditions and direct protocol observations.",
+  "transport_scope": "loopback only; no external endpoints or DNS",
+  "cases": [
+    {
+      "case_id": "ordinary_https_no_ech",
+      "condition": "ECH explicitly disabled against the local ECH server",
+      "ground_truth_cause": "ordinary_tls_without_ech",
+      "expected_classifier_label": "ech_not_attempted",
+      "score_scope": "observed mode and protocol behavior",
+      "evidence_requirements": ["requested_mode=none", "HTTP 200", "server ECH status NOT_TRIED"]
+    },
+    {
+      "case_id": "incompatible_well_formed_ech_config",
+      "condition": "Client receives a freshly generated, syntactically valid ECHConfigList with a new HPKE key; server retains the existing local ECH private key/config",
+      "ground_truth_cause": "client_config_does_not_match_server_ech_key",
+      "expected_classifier_label": "server_rejected_ech_retry",
+      "score_scope": "server rejection and retry event only; root-cause taxonomy is not represented",
+      "causal_attribution_supported": false,
+      "evidence_requirements": ["well-formed client ECHConfigList preserved", "client and server config hashes differ", "curl reports ECH rejected", "retry config received", "server log captured"]
+    },
+    {
+      "case_id": "certificate_verification_failure_no_ech",
+      "condition": "ECH disabled; connect to loopback using wrong.localhost while validating the existing certificate for public.localhost",
+      "ground_truth_cause": "certificate_hostname_verification_failure",
+      "expected_classifier_label": "ech_independent_tls_failure",
+      "score_scope": "independent TLS failure category; certificate hostname mismatch independently verified",
+      "evidence_requirements": ["requested_mode=none", "certificate verification enabled", "requested hostname absent from certificate SAN", "curl reports certificate verification error", "TCP connection established"]
+    },
+    {
+      "case_id": "tcp_connection_refusal_loopback",
+      "condition": "Connect to a loopback port held bound but not listening by the runner",
+      "ground_truth_cause": "local_tcp_connection_refused",
+      "expected_classifier_label": "tcp_failure",
+      "score_scope": "transport failure category; local socket state and curl refusal independently verified",
+      "evidence_requirements": ["loopback socket bound and not listening during attempt", "curl reports connection refused", "no TLS handshake observed"]
+    },
+    {
+      "case_id": "malformed_ech_config",
+      "condition": "Pass the exact fixed invalid ECHConfigList ecl:AA== to curl",
+      "ground_truth_cause": "client_ech_config_parse_failure",
+      "expected_classifier_label": "inconclusive",
+      "score_scope": "correct abstention; schema has no client-config-parse-error class",
+      "evidence_requirements": ["exact ECH input preserved", "curl reports ECH config parse/setup error", "no TCP connection established"]
+    }
+  ]
+}

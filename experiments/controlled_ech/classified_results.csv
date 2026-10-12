@@ -1,0 +1,9 @@
+file,case,classification,curl_exit,http_status,ech_success_marker,ech_rejection_marker,client_config_parse_error,retry_config_received,server_ech_status
+baseline_ech.log,valid_ech_baseline,ech_success,0,200,True,False,False,False,SUCCESS
+mismatched_ech.log,alternate_outer_name,ech_success,0,200,True,False,False,False,SUCCESS
+invalid_ech.log,malformed_config,client_config_parse_error,35,0,False,False,True,False,not_reported
+control.log,ordinary_https_control,control_success_no_ech,0,200,False,False,False,False,NOT_TRIED
+dns_published_config.log,dns_published_config,ech_rejected_server_retry,101,0,False,True,False,True,not_reported
+fresh_retry_config.log,fresh_retry_config,ech_success,0,200,True,False,False,False,SUCCESS
+cross_server_config.log,cross_server_config,ech_rejected_server_retry,101,0,False,True,False,True,not_reported
+cross_server_retry.log,cross_server_retry,ech_success,0,200,True,False,False,False,SUCCESS

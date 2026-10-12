@@ -1,0 +1,33 @@
+* Host defo.ie:443 was resolved.
+* IPv6: (none)
+* IPv4: 213.108.108.101
+*   Trying 213.108.108.101:443...
+* ECH: ECHConfig from command line
+* ALPN: curl offers http/1.1
+} [5 bytes data]
+* TLSv1.3 (OUT), TLS handshake, Client hello (1):
+} [1673 bytes data]
+* SSL Trust Anchors:
+*   CAfile: /etc/ssl/cert.pem
+{ [5 bytes data]
+* TLSv1.3 (IN), TLS handshake, Server hello (2):
+{ [1210 bytes data]
+* TLSv1.3 (IN), TLS change cipher, Change cipher spec (1):
+{ [1 bytes data]
+* TLSv1.3 (IN), TLS handshake, Encrypted Extensions (8):
+{ [95 bytes data]
+* TLSv1.3 (IN), TLS handshake, Certificate (11):
+{ [4071 bytes data]
+* TLSv1.3 (IN), TLS handshake, CERT verify (15):
+{ [264 bytes data]
+* TLSv1.3 (IN), TLS handshake, Finished (20):
+{ [52 bytes data]
+* TLSv1.3 (OUT), TLS alert, ECH required (633):
+} [2 bytes data]
+* ECH: retry_configs AED+DQA8+QAgACCtPMcr22GmEk4uxnbc/Rrq7HdWZDaenrHI22Bd40tVCwAEAAEAAQANY292ZXIuZGVmby5pZQAA
+* ECH: retry_configs for defo.ie from cover.defo.ie, 424 -105
+* ECH: rejected, error:0A0001A8:SSL routines::ech required
+* closing connection #0
+curl: (101) ECH: rejected, error:0A0001A8:SSL routines::ech required
+
+HTTP_STATUS:000
